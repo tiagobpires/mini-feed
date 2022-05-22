@@ -68,7 +68,7 @@ set FLASK_APP="main.py"
 # Create database
 flask db init
 flask db migrate
-flask db upgadre
+flask db upgrade
 ```
 
 3. Run the application:
