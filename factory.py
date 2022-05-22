@@ -2,7 +2,7 @@ from flask import Flask
 from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
-from spectree import SecurityScheme, SpecTree
+from spectree import SecurityScheme, SpecTree, Tag
 
 import os
 from config import DevelopmentConfig, ProductionConfig
@@ -22,6 +22,11 @@ api = SpecTree(
         )
     ],
     security={"api_key": []},
+    description="""API to manage users and posts. <br> <br> 
+    In auth, add "Bearer " before token. <br> <br> 
+    [Contact the developer](mailto:tiagobarrospires@gmail.com) <br> <br> 
+    [GitHub Repo](https://github.com/tiagobpires/mini-feed) 
+    """,
 )
 
 
