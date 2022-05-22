@@ -58,7 +58,20 @@ $ pip install -r requirements.txt
 
 ## Usage
 
-First, create a ".env" file based on the [template](https://github.com/tiagobpires/mini-feed/blob/main/.env.template). Then, run the application:
+1. Create a ".env" file based on the [template](https://github.com/tiagobpires/mini-feed/blob/main/.env.template). <br>
+2. Create the database: 
+
+```bash
+# Set FLASK_APP variable (for windows)
+set FLASK_APP="main.py"
+
+# Create database
+flask db init
+flask db migrate
+flask db upgadre
+```
+
+3. Run the application:
 
 ```bash
 # Running
